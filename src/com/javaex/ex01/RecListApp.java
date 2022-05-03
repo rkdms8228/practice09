@@ -65,8 +65,9 @@ public class RecListApp {
 	//리스트 모두를 draw하는 메소드
 	public static void listAllDraw(List<Rectangle> list) {
 		
-		//내용작성 
-	
+		//내용작성
+		((Rectangle)list).draw();
+
 	}
 	
 }
