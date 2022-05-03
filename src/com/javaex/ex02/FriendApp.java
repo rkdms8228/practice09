@@ -16,6 +16,7 @@ public class FriendApp {
     		
     		String[] info = sc.nextLine().split(" ");
     		fList.add(new Friend(info[0], info[1], info[2]));
+    		
     	}
     	
     	for(Friend info : fList) {
