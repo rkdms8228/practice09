@@ -1,24 +1,25 @@
 package com.javaex.ex02;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.List;
 
 public class FriendApp {
 
     public static void main(String[] args) {
 
-    	Friend[] ArrayList = new Friend[3];
-    	
     	Scanner sc = new Scanner(System.in);
     	
-    	for(int i =0; i<ArrayList.length; i++) {
+    	List<Friend> fList = new ArrayList<Friend>();
+    	
+    	for(int i =0; i<3; i++) {
     		
     		String[] info = sc.nextLine().split(" ");
-    		ArrayList[i] = new Friend(info[0], info[1], info[2]);
-    		
+    		fList.add(new Friend(info[0], info[1], info[2]));
     	}
     	
-    	for(int i =0; i<ArrayList.length; i++) {
-    		ArrayList[i].showInfo();
+    	for(Friend info : fList) {
+    		info.showInfo();
     	}
     	
     	sc.close();
